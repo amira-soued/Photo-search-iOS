@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GwW-zH-1J1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Table View Controller-->
+        <scene sceneID="W23-U7-Iax">
+            <objects>
+                <tableViewController id="gVX-DZ-krb" customClass="ImageTableViewController" customModule="pixabay" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2FX-gz-cn1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="421" id="cC9-f5-cQY" customClass="selfSizingTableViewCell" customModule="pixabay" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="421"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cC9-f5-cQY" id="mCJ-pu-iUk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="421"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZB-WG-bZf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="421" id="RcD-OA-rMs"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LZB-WG-bZf" firstAttribute="top" secondItem="mCJ-pu-iUk" secondAttribute="top" id="XE6-HH-r6n"/>
+                                        <constraint firstAttribute="trailing" secondItem="LZB-WG-bZf" secondAttribute="trailing" id="bX3-re-XYt"/>
+                                        <constraint firstItem="LZB-WG-bZf" firstAttribute="leading" secondItem="mCJ-pu-iUk" secondAttribute="leading" id="hdl-6z-DzG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gVX-DZ-krb" id="ZEz-Fj-ovJ"/>
+                            <outlet property="delegate" destination="gVX-DZ-krb" id="VCg-K9-oDk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vp8-tg-6LD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="LzA-Ck-g0g"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ec1-Nf-0Iv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450.7246376811595" y="-101.11607142857143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5da-7L-4gL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GwW-zH-1J1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ID-2a-YjK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gVX-DZ-krb" kind="relationship" relationship="rootViewController" id="ilx-wI-pDk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mP7-kI-SSF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540.57971014492762" y="-101.11607142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
